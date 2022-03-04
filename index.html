@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Analyzer</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="shortcut icon" href="logo.JPG" />
+
+</head>
+
+<body>
+  <div class="container-md">
+    <textarea id="text" spellcheck="false"></textarea>
+    <button class="btn btn-warning" onclick="setText()">Generate
+      Info
+    </button>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center mb-2 mt-5">
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card round-borders m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="sentences-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>sentences</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="words-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>Words</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="uppercase-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>Uppercase</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="lowercase-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>Lowercase</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="space-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>Space</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="digit-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>Digit</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="vowel-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>Vowel</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3 col-sm-6 text-center mb-2">
+        <div class="card m-auto" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title" id="constant-box">000</h2>
+            <a href="#" class="btn btn-primary disabled" disabled>Constant</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js">
+  </script>
+</body>
+
+
+</html>

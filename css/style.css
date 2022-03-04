@@ -1,0 +1,39 @@
+
+#text {
+    height: 500px;
+    width: 100%;
+    font-size: 30px;
+    border:none;
+    outline: none;
+    background-color: #B8B0B0;
+    padding:10px;
+}
+
+.btn {
+    margin: 13px 0px;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 45px;
+    width: 165px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+        position: relative;
+        cursor: pointer;
+}
+  
+.round-borders {
+    border-radius: 50px;
+}
+@media only screen and (max-width: 1200px) {
+    #text  {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #text  {
+        height: 300px;
+    }
+}
+
