@@ -15,15 +15,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const findLength = (item) => (item == null ? 0 : item.length);
 
+  // Function to animate numbers smoothly
+  const animateNumber = (element, start, end, duration) => {
+    let startTime = null;
+    
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.innerText = value;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
   const updateStatsDisplay = () => {
-    document.getElementById('sentenceCount').innerText = data.sentences;
-    document.getElementById('wordCount').innerText = data.words;
-    document.getElementById('uppercaseCount').innerText = data.uppercase;
-    document.getElementById('lowercaseCount').innerText = data.lowercase;
-    document.getElementById('spaceCount').innerText = data.spaces;
-    document.getElementById('digitCount').innerText = data.digits;
-    document.getElementById('vowelCount').innerText = data.vowels;
-    document.getElementById('consonantCount').innerText = data.consonants;
+    animateNumber(document.getElementById('sentenceCount'), 0, data.sentences, 1000);
+    animateNumber(document.getElementById('wordCount'), 0, data.words, 1000);
+    animateNumber(document.getElementById('uppercaseCount'), 0, data.uppercase, 1000);
+    animateNumber(document.getElementById('lowercaseCount'), 0, data.lowercase, 1000);
+    animateNumber(document.getElementById('spaceCount'), 0, data.spaces, 1000);
+    animateNumber(document.getElementById('digitCount'), 0, data.digits, 1000);
+    animateNumber(document.getElementById('vowelCount'), 0, data.vowels, 1000);
+    animateNumber(document.getElementById('consonantCount'), 0, data.consonants, 1000);
   };
 
   const analyzeText = () => {
@@ -46,6 +64,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const darkModeToggle = document.getElementById('darkModeToggle');
   darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 });
